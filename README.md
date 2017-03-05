@@ -96,13 +96,13 @@ public class TasksSample extends TaskProxy<TasksSample> {
     public Task<Void> doTasks() {
         Log.d("TASK", "TasksSample tasks begin");
         TaskFactory.startSync(
-                getProxy().task1().tag(1),
-                getProxy().task2().tag(2),
-                getProxy().task3().tag(3),
-                getProxy().task4().tag(4),
-                getProxy().task5().tag(5)
+                getProxy().task1(),
+                getProxy().task2(),
+                getProxy().task3(),
+                getProxy().task4(),
+                getProxy().task5()
         );
-        getProxy().task6().tag(6).startSync();
+        getProxy().task6().startSync();
         Log.d("TASK", "TasksSample tasks end");
         return VoidTask();
     }
